@@ -1,0 +1,6 @@
+Steps
+
+1. Deploy argocd helm chart
+	helm install argocd argo/argo-cd --version 5.43.3 -n argocd --create-namespace
+2. Deploy the root app
+	k apply -f root-app.yaml	

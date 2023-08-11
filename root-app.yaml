@@ -7,7 +7,7 @@ spec:
   project: default
   sources:
   - repoURL: 'https://github.com/silveraignacio/argocd-poc.git'
-    path: core-services
+    path: core-services/ltitdev/
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
