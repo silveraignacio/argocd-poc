@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 'root-apps'
+  namespace: argocd
+spec:
+  project: default
+  sources:
+  - repoURL: 'https://github.com/silveraignacio/argocd-poc.git'
+    path: new-root-apps
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true

@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 'jenkins'
+  namespace: argocd
+spec:
+  project: default
+  sources:
+  - repoURL: https://github.com/silveraignacio/argocd-poc.git
+    ref: values
+  - repoURL: 'https://charts.jenkins.io'
+    targetRevision: 4.5.0
+    chart: jenkins
+    helm:
+      valueFiles:
+      - $values/values/jenkins.yaml
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: cicd
+  syncPolicy:
+    automated:
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

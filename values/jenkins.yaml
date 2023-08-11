@@ -1,0 +1,12 @@
+controller:
+  resources: 
+   {
+    "limits": {
+      "cpu": "2020m",
+      "memory": "4090Mi"
+    },
+    "requests": {
+      "cpu": "60m",
+      "memory": "256Mi"
+    }
+   }
