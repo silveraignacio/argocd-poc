@@ -5,6 +5,6 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  sources:
-  - repoURL: 'https://open-policy-agent.github.io/gatekeeper/charts'
+  source:
+    repoURL: 'https://open-policy-agent.github.io/gatekeeper/charts'
     targetRevision: 3.14.0
