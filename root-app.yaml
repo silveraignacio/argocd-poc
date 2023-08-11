@@ -7,7 +7,7 @@ spec:
   project: default
   sources:
   - repoURL: 'https://github.com/silveraignacio/argocd-poc.git'
-    path: new-root-apps
+    path: core-services
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
