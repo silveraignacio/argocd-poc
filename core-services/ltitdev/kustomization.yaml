@@ -4,5 +4,5 @@ resources:
 - ../base/gatekeeper
 - ../base/prometheus
 - ../base/jenkins
-patches:
-- path: merges/gatekeeper.yaml
+patchesStrategicMerge:
+- merges/gatekeeper.yaml
