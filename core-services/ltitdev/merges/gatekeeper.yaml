@@ -5,6 +5,9 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
-    repoURL: 'https://open-policy-agent.github.io/gatekeeper/charts'
+  sources:
+  - repoURL: 'https://open-policy-agent.github.io/gatekeeper/charts'
     targetRevision: 3.14.0
+    chart: gatekeeper
+  - repoURL: 'https://github.com/silveraignacio/argocd-poc.git'
+    path: opa-exporter
