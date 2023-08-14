@@ -4,5 +4,6 @@ resources:
 - ../base/gatekeeper
 - ../base/prometheus
 - ../base/jenkins
+- ../base/opa-exporter
 patchesStrategicMerge:
 - merges/gatekeeper.yaml
